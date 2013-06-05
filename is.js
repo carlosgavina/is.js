@@ -4,7 +4,7 @@
  *
  * @author Carlos Gavina
  * @contact hello@carlosgavina.com
- * @version 0.1
+ * @version 0.2
  *
  * @github https://github.com/carlosgavina/is.js
  *
@@ -23,27 +23,28 @@
  *  on github: https://github.com/carlosgavina/is.js
  *
  */
-(function() {
+(function( name ) {
 
-  var is = function( what, t, f ) {
+  var is = function( o ) {
 
-    var iftrue    = typeof t !== 'undefined' ? t : true,
-        iffalse   = typeof f !== 'undefined' ? f : false,
-        result    = iffalse;
+      var a = function( what, t, f ) {
+              var iftrue    = typeof t !== 'undefined' ? t : true,
+                  iffalse   = typeof f !== 'undefined' ? f : false,
+                  result    = iffalse;
 
-    if ( this.constructor === what ) {
-      result = iftrue;
-    }
+              if ( o && o.constructor === what ) {
+                result = iftrue;
+              } else if ( o === undefined ) {
+                result = iftrue;
+              }
 
-    return result;
+              return result;
+          };
 
-  };
+      return { a: a, an: a };
 
-  String.prototype.is     = is;
-  Array.prototype.is      = is;
-  Object.prototype.is     = is;
-  Number.prototype.is     = is;
-  Boolean.prototype.is    = is;
-  Function.prototype.is   = is;
+    };
 
-})();
+  window[name] = is;
+
+})( 'is' );

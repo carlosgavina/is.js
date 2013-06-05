@@ -1,6 +1,6 @@
 # is.js
 
-__Current Version:__ 0.1
+__Current Version:__ 0.2
 
 Tiny and bulletproof way to check variable types in javascript.
 
@@ -25,17 +25,21 @@ Simple and straight forward:
 
 ```js
 
-var a = ['Mango', 'Oranges'],
-	b = 'Apple';
+var fruits 	= ['Mango', 'Oranges'],
+	brand 	= 'Apple';
 
 	// true
-	a.is( Array );
+	is( fruits ).an( Array );
 
 	// false
-	b.is( Object );
+	is( brand ).an( Object );
 
 	// true
-	b.is( String );
+	is( brand ).a( String );
+
+	/**
+	 * !IMPORTANT : Yes, for the OCD's out there you can use 'a' or 'an' method, the result is the same
+	 */
 
 ```
 
@@ -44,9 +48,8 @@ You can also replace triary operations:
 
 ```js
 
-var a = ['Mango', 'Oranges'];
+var fruits = ['Mango', 'Oranges'];
 
 	// if it is an array returns it, if not returns an empty array
-	a.is( Array, a, [] );
-
+	is( fruits ).an( Array, fruits, [] );
 ```
