@@ -4,7 +4,7 @@
  *
  * @author Carlos Gavina
  * @contact hello@carlosgavina.com
- * @version 0.3
+ * @version 0.4
  *
  * @github https://github.com/carlosgavina/is.js
  *
@@ -33,7 +33,7 @@
                   result    = o === undefined && o === what ? iftrue : iffalse;
 
 
-              if ( ( o && o.constructor === what ) ) {
+              if ( o && ( o.constructor === what || ( what && typeof o === 'object' && o instanceof what ) ) ) {
                 result = iftrue;
               }
 
