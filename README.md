@@ -1,6 +1,6 @@
 # is.js
 
-__Current Version:__ 0.4
+__Current Version:__ 0.5
 
 Tiny and bulletproof way to check variable types and do ternary operators in javascript.
 
