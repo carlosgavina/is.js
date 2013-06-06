@@ -7,7 +7,7 @@ Tiny and bulletproof way to check variable types in javascript.
 
 ## Why?
 
-I was bored of using typeof so many times in my apps.
+I was bored of using `typeof` and `ternary operators` so many times in my apps.
 
 
 ## Quick Start
