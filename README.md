@@ -5,12 +5,12 @@ __Current Version:__ 0.4
 Tiny and bulletproof way to check variable types and do ternary operators in javascript.
 
 
-## Why?
+#### Why?
 
 I was bored of using `typeof` and `ternary operators` so many times in my apps.
 
 
-## Supported Browsers
+#### Supported Browsers
 
 All modern browsers and Internet Explorer 8+
 
