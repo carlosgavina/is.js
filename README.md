@@ -1,6 +1,6 @@
 # is.js
 
-__Current Version:__ 0.2
+__Current Version:__ 0.3
 
 Tiny and bulletproof way to check variable types in javascript.
 
