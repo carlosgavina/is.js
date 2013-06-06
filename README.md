@@ -2,7 +2,7 @@
 
 __Current Version:__ 0.3
 
-Tiny and bulletproof way to check variable types in javascript.
+Tiny and bulletproof way to check variable types and do ternary operators in javascript.
 
 
 ## Why?
@@ -44,7 +44,7 @@ var fruits 	= ['Mango', 'Oranges'],
 ```
 
 
-You can also replace triary operations:
+You can also replace ternary operators:
 
 ```js
 
