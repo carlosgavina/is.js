@@ -1,6 +1,6 @@
 # is.js
 
-__Current Version:__ 0.3
+__Current Version:__ 0.4
 
 Tiny and bulletproof way to check variable types and do ternary operators in javascript.
 
@@ -52,4 +52,15 @@ var fruits = ['Mango', 'Oranges'];
 
 	// if it is an array returns it, if not returns an empty array
 	is( fruits ).an( Array, fruits, [] );
+```
+
+
+Checking DOM Elements:
+
+```js
+// This example uses jQuery
+var $body = $('body');
+
+	// true
+	is( $body[0] ).an( Element );
 ```
