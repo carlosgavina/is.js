@@ -10,6 +10,11 @@ Tiny and bulletproof way to check variable types and do ternary operators in jav
 I was bored of using `typeof` and `ternary operators` so many times in my apps.
 
 
+## Supported Browsers
+
+All modern browsers and Internet Explorer 8+
+
+
 ## Quick Start
 
 Include [is.js](is.js) in your page, no dependencies!
