@@ -49,25 +49,6 @@ var fruits 	= ['Mango', 'Oranges'],
 ```
 
 
-~~You can also replace ternary operators~~:
-
-```js
-
-// For the sake of performance this is no longer supported, tho the following instead:
-var fruits = ['Mango', 'Oranges'];
-
-fruits = is( fruits ).an( Array ) ? fruits : [];
-
-
-
-// Previous example:
-// var fruits = ['Mango', 'Oranges'];
-
-	// if it is an array returns it, if not returns an empty array
-	// is( fruits ).an( Array, fruits, [] );
-```
-
-
 Checking DOM Elements:
 
 ```js
@@ -76,4 +57,21 @@ var $body = $('body');
 
 	// true
 	is( $body[0] ).an( Element );
+```
+
+
+~~You can also replace ternary operators~~ This was removed in version 0.6, but here is a solution:
+
+```js
+
+// For the sake of performance this is no longer supported, tho the following instead:
+var fruits = ['Mango', 'Oranges'];
+
+fruits = is( fruits ).an( Array ) ? fruits : [];
+
+// Previous example:
+// var fruits = ['Mango', 'Oranges'];
+
+// if it is an array returns it, if not returns an empty array
+// is( fruits ).an( Array, fruits, [] );
 ```
