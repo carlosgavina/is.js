@@ -1,13 +1,13 @@
 # is.js
 
-__Current Version:__ 0.5
+__Current Version:__ 0.6
 
-Tiny and bulletproof way to check variable types and do ternary operators in javascript.
+Tiny and bulletproof way to check variable types ~~and do ternary operators~~ in javascript.
 
 
 #### Why?
 
-I was bored of using `typeof` and `ternary operators` so many times in my apps.
+I was bored of using `typeof` ~~and `ternary operators`~~ so many times in my apps.
 
 
 #### Supported Browsers
@@ -49,14 +49,22 @@ var fruits 	= ['Mango', 'Oranges'],
 ```
 
 
-You can also replace ternary operators:
+~~You can also replace ternary operators~~:
 
 ```js
 
+// For the sake of performance this is no longer supported, tho the following instead:
 var fruits = ['Mango', 'Oranges'];
 
+fruits = is( fruits ).an( Array ) ? fruits : [];
+
+
+
+// Previous example:
+// var fruits = ['Mango', 'Oranges'];
+
 	// if it is an array returns it, if not returns an empty array
-	is( fruits ).an( Array, fruits, [] );
+	// is( fruits ).an( Array, fruits, [] );
 ```
 
 

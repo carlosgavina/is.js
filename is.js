@@ -4,7 +4,7 @@
  *
  * @author Carlos Gavina
  * @contact hello@carlosgavina.com
- * @version 0.5
+ * @version 0.6
  *
  * @github https://github.com/carlosgavina/is.js
  *
@@ -27,16 +27,12 @@
 
   var is = function( o ) {
 
-      var a = function( what, t, f ) {
-              var iftrue    = t === undefined ? true : t,
-                  iffalse   = f === undefined ? false : f,
-                  result    = o === undefined && o === what ? iftrue : iffalse;
+      var a = function( what ) {
 
               if (( o !== undefined && o !== null && o.constructor === what && what ) || ( what && typeof o === 'object' && o instanceof what ) || ( !what && what === o ) ) {
-                result = iftrue;
+                return true;
               }
-
-              return result;
+              return false;
           };
 
       return { a: a, an: a };
