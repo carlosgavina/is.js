@@ -23,7 +23,7 @@
  *  on github: https://github.com/carlosgavina/is.js
  *
  */
-(function( name ) {
+(function( name, container ) {
 
   var is = function( o ) {
 
@@ -39,6 +39,6 @@
 
     };
 
-  window[name] = is;
+  (container || window)[name] = is;
 
 })( 'is' );
