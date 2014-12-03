@@ -1,5 +1,4 @@
 /**
- *
  * is.js - The best way to see variable types.
  *
  * @author Carlos Gavina
@@ -17,13 +16,12 @@
  *
  * @copyright 2013, Carlos Gavina
  *
- * TODO
- *   Talk about UMD
+ * @see
+ *     In order to formet easy of use, UMD design patter was applied.
+ *     Consult https://github.com/umdjs/umd for more information about it.
  *
  * @example
- *
- *  on github: https://github.com/carlosgavina/is.js
- *
+ *     On GitHub: https://github.com/carlosgavina/is.js
  */
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -34,17 +32,18 @@
         root.is = factory();
     }
 }(this, function () {
-    return function( o ) {
+    return function (o) {
+        var a = function (what) {
+            return !!(
+                (o !== undefined && o !== null && o.constructor === what && what) ||
+                (what && toString.call(o) ===  '[object Object]' && o instanceof what) ||
+                (!what && what === o)
+            );
+        };
 
-      var a = function( what ) {
-
-              if (( o !== undefined && o !== null && o.constructor === what && what ) || ( what && typeof o === 'object' && o instanceof what ) || ( !what && what === o ) ) {
-                return true;
-              }
-              return false;
-          };
-
-      return { a: a, an: a };
-
+        return {
+            a: a,
+            an: a
+        };
     };
 }));
