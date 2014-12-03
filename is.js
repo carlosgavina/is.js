@@ -17,15 +17,24 @@
  *
  * @copyright 2013, Carlos Gavina
  *
+ * TODO
+ *   Talk about UMD
  *
  * @example
  *
  *  on github: https://github.com/carlosgavina/is.js
  *
  */
-(function( name, container ) {
-
-  var is = function( o ) {
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        define([], factory);
+    } else if (typeof exports === 'object') {
+        module.exports = factory();
+    } else {
+        root.is = factory();
+    }
+}(this, function () {
+    return function( o ) {
 
       var a = function( what ) {
 
@@ -38,7 +47,4 @@
       return { a: a, an: a };
 
     };
-
-  (container || window)[name] = is;
-
-})( 'is' );
+}));
