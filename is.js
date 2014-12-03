@@ -29,10 +29,7 @@
 
       var a = function( what ) {
 
-              if (( o !== undefined && o !== null && o.constructor === what && what ) || ( what && typeof o === 'object' && o instanceof what ) || ( !what && what === o ) ) {
-                return true;
-              }
-              return false;
+              return Boolean( ( o !== undefined && o !== null && o.constructor === what && what ) || ( what && typeof o === 'object' && o instanceof what ) || ( !what && what === o ) );
           };
 
       return { a: a, an: a };
