@@ -1,0 +1,36 @@
+{
+  "name": "is",
+  "version": "0.6.0",
+  "description": "Tiny and bulletproof way to check variable types in JavaScript.",
+  "main": "is.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "should": "^4.3.0",
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlosgavina/is.js.git"
+  },
+  "keywords": [
+    "is",
+    "check",
+    "type",
+    "typeof"
+  ],
+  "author": "Carlos Gavina <hello@carlosgavina.com>",
+  "contributors": [{
+    "name": "Gonçalo Morais",
+    "email": "gnclmorais@gmail.com"
+  }],
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/carlosgavina/is.js/issues"
+  },
+  "homepage": "https://github.com/carlosgavina/is.js"
+}
