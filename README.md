@@ -8,17 +8,18 @@ Focused on semantics and more strict, so it differs from results with `typeof`.
 
 #### Why?
 
-I was bored of using `typeof` and double check some _edge_ cases so many times in my apps, like `NaN` (not a number) returning `Number` with `typeof`. What?
+I was bored of using `typeof` and double check some _edge_ cases so many times in my apps, like `NaN` (not a number) returning `Number`. What?
 
-Refer to the table bellow for further differences.
+Refer to the [table](#essential-differences-from-typeof) bellow and [usage](#usage) for further differences.
 
 
 #### Supported Browsers
 
 All modern browsers and Internet Explorer 8+
 
+---
 
-## Essential differences from `typeof`
+#### Essential differences from `typeof`
 |   | typeof | is.js |
 |---|--------|-------|
 | `new Boolean('4')` | `Object` | `Boolean` |
@@ -85,15 +86,6 @@ var fruits = ['Mango', 'Oranges'];
 fruits = is(fruits).an(Array) ? fruits : [];
 
 ```
-
-
-#### Essential differences from `typeof`
-|   | typeof | is.js |
-|---|--------|-------|
-| `new Boolean('4')` | `Object` | `Boolean` |
-| `null` | `Object` | `null` |
-| `NaN` | `Number` | `!Number` |
-| `[]` | `Object` | `Array` |
 
 
 #### Minified version
