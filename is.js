@@ -35,7 +35,7 @@
     return function (o) {
         var a = function (what) {
             return !!(
-                (o !== undefined && o !== null && o.constructor === what && what) ||
+                (o !== undefined && o !== null && o === o && o.constructor === what && what) ||
                 (what && toString.call(o) ===  '[object Object]' && o instanceof what) ||
                 (!what && what === o)
             );
