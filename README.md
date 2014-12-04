@@ -1,18 +1,30 @@
 # is.js
 
-__Current Version:__ 0.6.1
+__Current Version:__ 0.7
 
-Tiny and bulletproof way to check variable types ~~and do ternary operators~~ in javascript.
+Tiny and bulletproof way to check variable types in javascript.
+Focused on semantics and more strict, so it differs from results with `typeof`.
 
 
 #### Why?
 
-I was bored of using `typeof` ~~and `ternary operators`~~ so many times in my apps.
+I was bored of using `typeof` and double check some _edge_ cases so many times in my apps, like `NaN` (not a number) returning `Number` with `typeof`. What?
+
+Refer to the table bellow for further differences.
 
 
 #### Supported Browsers
 
 All modern browsers and Internet Explorer 8+
+
+
+## Essential differences from `typeof`
+|   | typeof | is.js |
+|---|--------|-------|
+| `new Boolean('4')` | `Object` | `Boolean` |
+| `null` | `Object` | `null` |
+| `NaN` | `Number` | `!Number` |
+| `[]` | `Object` | `Array` |
 
 
 ## Quick Start
@@ -72,11 +84,6 @@ var fruits = ['Mango', 'Oranges'];
 
 fruits = is(fruits).an(Array) ? fruits : [];
 
-// Previous example:
-// var fruits = ['Mango', 'Oranges'];
-
-// if it is an array returns it, if not returns an empty array
-// is(fruits).an(Array, fruits, []);
 ```
 
 
@@ -100,3 +107,9 @@ uglifyjs is.js -c -m -o is.min.js
 #### Tests
 
 This tool would make no sense without tests to keep it on track. So in order to run the current tests cases, make sure you have [Mocha installed](http://mochajs.org/#installation) and then just run `mocha` on this project’s root folder.
+
+---
+
+#### Thanks
+Many many thanks to [@gnclmorais](http://twitter.com/gnclmorais) for his contributions 
+

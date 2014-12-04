@@ -1,6 +1,6 @@
 {
   "name": "is",
-  "version": "0.6.1",
+  "version": "0.7",
   "description": "Tiny and bulletproof way to check variable types in JavaScript.",
   "main": "is.js",
   "directories": {

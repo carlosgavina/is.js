@@ -3,7 +3,7 @@
  *
  * @author Carlos Gavina
  * @contact hello@carlosgavina.com
- * @version 0.6
+ * @version 0.7
  *
  * @github https://github.com/carlosgavina/is.js
  *
@@ -14,7 +14,7 @@
  *     To Public License, Version 2, as published by Sam Hocevar. See
  *     http://sam.zoy.org/wtfpl/COPYING for more details.
  *
- * @copyright 2013, Carlos Gavina
+ * @copyright 2014, Carlos Gavina
  *
  * @see
  *     In order to formet easy of use, UMD design patter was applied.
